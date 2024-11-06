@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    >
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginEnd="50dp"
+        >
+
+        <TextView
+            android:id="@+id/sweet_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nazwa słodycza"
+            android:textSize="18sp"
+            android:textColor="#897306"/>
+
+        <TextView
+            android:id="@+id/sweet_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cena 0.0 PLN"
+            android:textColor="#cbacba"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/favorite_imagebutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_favorite_border_24"
+        android:contentDescription="add to favorite"
+        android:padding="8dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:layout_marginEnd="10dp"/>
+
+
+    <Button
+        android:id="@+id/add_to_cart_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dodaj do \nkoszyka"
+        android:textSize="10sp"
+        android:gravity="center"
+        android:layout_marginEnd="5dp"
+
+        />
+
+
+</LinearLayout>
