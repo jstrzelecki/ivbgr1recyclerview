@@ -19,6 +19,7 @@ class MyAdapter(
         val sweetPrice: TextView = itemView.findViewById(R.id.sweet_price)
         val addToCartButton: Button = itemView.findViewById(R.id.add_to_cart_button)
         val favoriteButton: ImageButton = itemView.findViewById(R.id.favorite_imagebutton)
+        val addToCartCounter: TextView = itemView.findViewById(R.id.add_to_cart_count)
     }
 
 
@@ -40,6 +41,8 @@ class MyAdapter(
             holder.favoriteButton.setImageResource(R.drawable.icon_favorite_border_24)
         }
 
+        holder.addToCartCounter.text = "Dodano: ${currentSweet.addToCartCounter}"
+
         holder.favoriteButton.setOnClickListener {
             currentSweet.isFavorite = !currentSweet.isFavorite
 
@@ -52,12 +55,15 @@ class MyAdapter(
 
         }
 
+
         holder.itemView.setOnClickListener {
             clickListener(currentSweet)
         }
 
         holder.addToCartButton.setOnClickListener {
             Log.i("add", "dodano do koszyka ${currentSweet.name}")
+            currentSweet.addToCartCounter += 1
+            holder.addToCartCounter.text = "Dodano: ${currentSweet.addToCartCounter}"
         }
     }
 

@@ -18,6 +18,20 @@
         android:layout_margin="20dp"
        />
 
+    <Button
+        android:id="@+id/save_list_to_json_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Zapisz listę do pliku json"
+        android:layout_margin="10dp"/>
+
+    <Button
+        android:id="@+id/load_list_to_json_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wczytaj listę z pliku json"
+        android:layout_margin="10dp"/>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/sweets_recyclerView"
         android:layout_width="match_parent"
